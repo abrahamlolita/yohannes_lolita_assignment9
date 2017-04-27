@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+        nav ul li a, nav ul li a:visited, nav ul li a:hover {
+        text-decoration: none;
+    }
+    </style>
+
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script>
+		$(function () {
+        "use strict";
+      $('#responsive-menu').mobileMenu();
+        $("#homenav, #aboutnav, #solutionav, #supportnav, #contactnav").tooltip({
+      show: {
+        effect: "slideDown",
+        delay: 200
+      }
+    });
+});
+	</script>
+</head>
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html" id="homenav" title="Interactive solutions and expertise guaranteed to provide you with a memorable and positive user experience">Home</a></li>
+				<li><a href="aboutus.html" id="aboutnav" title="Vecta Corp. provides scalable business solutions to help companies achieve success with innovative approaches and advanced methodologies">About Us</a></li>
+				<li><a href="solutions.html" id="solutionav" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers.">Solutions</a></li>
+				<li><a href="support.html" id="supportnav" title="Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers">Support</a></li>
+				<li><a href="contactus.html" id="contactnav" title="Contact a Sales Representative">Contact Us</a></li>
+			</ul>
+        </nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="sixteen columns">
+			<h4>Support</h4>
+			<p>Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers. These communities are your convenient one-stop shop for vSupport. Still have a question? <a href="mailto:support@vectacorp.com?Subject=I%20need%20help...">Send us an email</a>.</p>
+		</section>
+	</main>
+</body>
+</html>
