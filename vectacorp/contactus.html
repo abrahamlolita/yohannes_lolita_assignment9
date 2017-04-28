@@ -15,6 +15,15 @@
      .referral {
             margin-top: 15px;
         }
+        
+    .ui-button .ui-icon {
+    background-image: url(images/ui-icons_777777_256x240.png);
+}
+        
+    .products  .ui-button .ui-icon {
+    background-image: url(images/ui-icons_777777_256x240.png);
+}
+        
     </style>
 
 	<!--[if lt IE 9]>
@@ -24,7 +33,7 @@
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script>
-    $(function () {
+      $(function () {
         "use strict";
       $('#responsive-menu').mobileMenu();
         $("#homenav, #aboutnav, #solutionav, #supportnav, #contactnav").tooltip({
@@ -37,6 +46,7 @@
         
     $( function() {
             "use strict";
+  //$("#Mac","#Linux","#Unix","#Windows","#vProspect","#vConvert","#vRetain")
         $("#Mac").checkboxradio();
         $("#Linux").checkboxradio();
         $("#Unix").checkboxradio();
@@ -48,13 +58,24 @@
         });
         
     $( function() {
-        $(".widget input[type=submit]").button();
-        $("#submitform").click( function(event) {
-            event.preventDefault();
-            window.alert("Thank you for your inquiry")
-        });
+    $("#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
     });
-	</script>
+ 
+    $("#submitform").on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+                
+</script>
 </head>
 <body>
 	<main class="container">
@@ -130,14 +151,19 @@ Questions or comments for our sales representatives?
 <div class="widget">
  <input id="submitform" type="submit" name="submit" value="Submit Now">
 </div>
+<div id="dialog" title="Basic dialog">
+  <p>Thank you for your inquiry!</p>
+</div>
+
 </fieldset>
 </form>
 </section>
 		
-    <section id="testimonials" class="five columns">
-    <h4>Map</h4>
-    <p>&nbsp;</p>
-	</section>
+		<section id="testimonials" class="five columns">
+			<h4>Map</h4>
+			<p>&nbsp;</p>
+
+		</section>
 	</main>
-</body>
+	</body>
 </html>
